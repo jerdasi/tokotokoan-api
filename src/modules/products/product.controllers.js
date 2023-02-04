@@ -5,7 +5,7 @@ exports.products = async (req, res) => {
     const products = await Product.find();
     res.status(200).json({
       status: res.statusCode,
-      message: "get products success",
+      message: "Get All Products Success",
       data: {
         products,
       },
@@ -31,7 +31,7 @@ exports.add = async (req, res) => {
     await newProduct.save();
     res.status(201).json({
       status: res.statusCode,
-      message: "add product success",
+      message: "Add Product Success",
       data: {
         product: {
           name,
